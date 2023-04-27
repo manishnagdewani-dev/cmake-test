@@ -29,7 +29,7 @@ install:
   # preinstalled CMake with our own.
   - PATH=${DEPS_DIR}/cmake-install:${DEPS_DIR}/cmake-install/bin:$PATH
   - export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${DEPS_DIR}/cmake-install
-
+  - cmake --version
   # don't forget to switch back to the main build directory once you are done
   - cd ${TRAVIS_BUILD_DIR}
   
