@@ -1,7 +1,16 @@
 os: linux
 dist: jammy
 
-language: python
+language: cpp
+
+arch:
+  - amd64
+  - arm64  # please note arm64-graviton2 requires explicit virt: [lxd|vm] tag so it's recommended for jobs.include, see below
+  - ppc64le
+  - s390x
+
+compiler:
+  - gcc
       
 before_install:
   - echo "Running on the following travis CI runner"
